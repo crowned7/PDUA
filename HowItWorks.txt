@@ -1,0 +1,25 @@
+A continuación, describiré el funcionamiento del algoritmo de Booth en el procesador PDUA en cada ciclo:
+
+1. Inicialización:
+   - Se cargan los valores del multiplicando (M) y el multiplicador (Q) en registros internos del PDUA.
+   - Se inicializa un contador (i) para llevar un seguimiento de los ciclos del algoritmo.
+
+2. Ciclos del algoritmo:
+   - En cada ciclo, se realizan las siguientes operaciones:
+
+   a. Último bit del multiplicador (Q0):
+      - Se verifica el último bit del multiplicador (Q0).
+      - Si Q0 es igual a 1, se realiza la operación de suma/resta para ajustar el valor acumulado (AC) dentro del PDUA.
+
+   b. Dos bits consecutivos del multiplicador (Qi-1, Qi):
+      - Se verifica si los dos bits consecutivos del multiplicador (Qi-1, Qi) son iguales a "10" o "01".
+      - Si es "10", se realiza la operación de suma/resta para ajustar el valor acumulado (AC).
+      - Si es "01", se realiza la operación de suma/resta para ajustar el valor acumulado (AC).
+
+   c. Desplazamiento:
+      - Se realiza un desplazamiento a la derecha de los registros M y Q para preparar los bits para el siguiente ciclo.
+      - Se actualiza el contador (i) para el siguiente ciclo.
+
+3. Finalización:
+   - Después de un número específico de ciclos determinado por el tamaño de los registros M y Q, se completa la multiplicación.
+   - El resultado final se encuentra en los registros M y Q, y puede ser utilizado para operaciones posteriores dentro del procesador PDUA.
