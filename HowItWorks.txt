@@ -1,3 +1,6 @@
+- Link CircuitVerse: https://circuitverse.org/simulator/edit/pdua-arquitectura-931c1410-9a36-46cf-9d85-b5fd5de16bfa
+- Link YouTube: https://www.youtube.com/watch?v=hHPcU8bSwJY&pp=sAQB
+
 A continuación, describiré el funcionamiento del algoritmo de Booth en el procesador PDUA en cada ciclo:
 
 1. Inicialización:
